@@ -100,14 +100,9 @@ var form_validate = {
 			//set the params
 			var formSelectorId = (new Date()).getTime(),
 				formSelector   = 'form[form_validate_id='+formSelectorId+']';
-				form_validate.form_selector_string = '' + formSelector + ' select, ' +
-                                                                formSelector + ' input[type=text], ' +
-																formSelector + ' input[type=email], ' +
-                                                                formSelector + ' input[type=checkbox], ' +
-                                                                formSelector + ' textarea, ' +
-                                                                formSelector + ' input[type=hidden], ' +
-                                                                formSelector + ' input[type=password]';
-									
+				form_validate.form_selector_string = ''+formSelector+' select, '+
+									formSelector+' input, '+
+									formSelector+' textarea';					
 			//add the unique id as a custom attr to the form we are working with
 			$(formObject).attr('form_validate_id', formSelectorId);
 		}
